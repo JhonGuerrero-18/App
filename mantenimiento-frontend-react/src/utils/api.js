@@ -1,16 +1,16 @@
 // Configuración API para comunicación con backend Java
 import axios from 'axios';
 
-const API_BASE_URL = 'http://localhost:8080/MantenimientoSA';
+const API_BASE_URL = 'http://localhost:8080/MantenimientoSA/api';
 
 console.log('🔗 API Base URL:', API_BASE_URL);
 
 const api = axios.create({
   baseURL: API_BASE_URL,
   headers: {
-    'Content-Type': 'application/x-www-form-urlencoded',
+    'Content-Type': 'application/json',
   },
-  withCredentials: true,
+  withCredentials: false,
   timeout: 15000,
 });
 
