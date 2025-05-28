@@ -121,38 +121,59 @@ const Register = () => {
         maxWidth: '450px',
         margin: '20px'
       }}>
-        {/* Header */}
-        <div style={{ textAlign: 'center', marginBottom: '30px' }}>
-          <div style={{
-            backgroundColor: '#28a745',
-            color: 'white',
-            width: '60px',
-            height: '60px',
-            borderRadius: '50%',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            margin: '0 auto 20px',
-            fontSize: '24px'
-          }}>
-            👤
-          </div>
-          <h2 style={{
-            color: '#333',
-            margin: '0 0 10px 0',
-            fontSize: '24px',
-            fontWeight: '600'
-          }}>
-            Crear Cuenta
-          </h2>
-          <p style={{
-            color: '#666',
-            margin: 0,
-            fontSize: '14px'
-          }}>
-            Únete al Sistema de Gestión de Mantenimiento
-          </p>
-        </div>
+        // Al inicio del componente, reemplaza el header por esto:
+
+{/* Header */}
+<div style={{ textAlign: 'center', marginBottom: '30px' }}>
+  <div style={{
+    backgroundColor: '#28a745',
+    color: 'white',
+    width: '80px',
+    height: '80px',
+    borderRadius: '50%',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    margin: '0 auto 20px',
+    padding: '15px'
+  }}>
+    <img 
+      src="/images/logo.png"
+      alt="Mantenimiento S.A."
+      style={{
+        height: '50px',
+        width: 'auto',
+        objectFit: 'contain',
+        filter: 'brightness(0) invert(1)'
+      }}
+      onError={(e) => {
+        e.target.style.display = 'none';
+        e.target.nextSibling.style.display = 'block';
+      }}
+    />
+    <span style={{
+      fontSize: '24px',
+      display: 'none'
+    }}>
+      👤
+    </span>
+  </div>
+  <h2 style={{
+    color: '#333',
+    margin: '0 0 10px 0',
+    fontSize: '24px',
+    fontWeight: '600'
+  }}>
+    Crear Cuenta
+  </h2>
+  <p style={{
+    color: '#666',
+    margin: 0,
+    fontSize: '14px'
+  }}>
+    Únete al Sistema de Gestión de Mantenimiento S.A.
+  </p>
+</div>
 
         {/* Mensajes */}
         {message && (

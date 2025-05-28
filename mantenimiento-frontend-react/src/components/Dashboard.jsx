@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import authService from '../services/authService';
+import Logo from './common/Logo';
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -101,14 +102,20 @@ const Dashboard = () => {
           flexWrap: 'wrap',
           gap: '15px'
         }}>
-          <div>
-            <h1 style={{ margin: 0, fontSize: '20px' }}>
-              🔧 Panel de Control
-            </h1>
-            <p style={{ margin: '5px 0 0 0', fontSize: '14px', opacity: 0.9 }}>
-              Bienvenido, {user}
-            </p>
-          </div>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+  <Logo 
+    size="medium" 
+    variant="white" 
+  />
+  <div>
+    <h1 style={{ margin: 0, fontSize: '20px' }}>
+      🔧 Panel de Control
+    </h1>
+    <p style={{ margin: '5px 0 0 0', fontSize: '14px', opacity: 0.9 }}>
+      Bienvenido, {user}
+    </p>
+  </div>
+</div>
           
           <nav style={{
             display: 'flex',

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom'; // ← LÍNEA AGREGADA
 import authService from '../services/authService';
 
 const TestConnection = () => {
@@ -132,9 +133,9 @@ const TestConnection = () => {
       fontFamily: 'Arial, sans-serif',
       maxWidth: '1200px',
       margin: '0 auto',
-      backgroundColor: '#ffffff', // Fondo blanco
+      backgroundColor: '#ffffff',
       minHeight: '100vh',
-      color: '#333333' // Texto oscuro por defecto
+      color: '#333333'
     }}>
       <h1 style={{ 
         color: '#007bff', 
@@ -145,6 +146,47 @@ const TestConnection = () => {
       }}>
         🧪 Test de Conexión API - Mantenimiento S.A.
       </h1>
+      
+      {/* NAVEGACIÓN AGREGADA */}
+      <div style={{ 
+        display: 'flex', 
+        gap: '10px', 
+        justifyContent: 'center',
+        marginBottom: '30px',
+        flexWrap: 'wrap'
+      }}>
+        <Link 
+          to="/"
+          style={{
+            display: 'inline-block',
+            padding: '10px 20px',
+            backgroundColor: '#007bff',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '5px',
+            fontSize: '14px',
+            fontWeight: 'bold'
+          }}
+        >
+          🏠 Volver al Inicio
+        </Link>
+        
+        <Link 
+          to="/dashboard"
+          style={{
+            display: 'inline-block',
+            padding: '10px 20px',
+            backgroundColor: '#28a745',
+            color: 'white',
+            textDecoration: 'none',
+            borderRadius: '5px',
+            fontSize: '14px',
+            fontWeight: 'bold'
+          }}
+        >
+          📊 Ir al Dashboard
+        </Link>
+      </div>
       
       <div style={{ 
         display: 'grid', 
@@ -158,7 +200,7 @@ const TestConnection = () => {
           style={{ 
             padding: '12px 20px', 
             backgroundColor: loading ? '#6c757d' : '#007bff',
-            color: '#ffffff', // Texto blanco en botones
+            color: '#ffffff',
             border: 'none',
             borderRadius: '5px',
             cursor: loading ? 'not-allowed' : 'pointer',
@@ -176,7 +218,7 @@ const TestConnection = () => {
           style={{ 
             padding: '12px 20px', 
             backgroundColor: loading ? '#6c757d' : '#28a745',
-            color: '#ffffff', // Texto blanco en botones
+            color: '#ffffff',
             border: 'none',
             borderRadius: '5px',
             cursor: loading ? 'not-allowed' : 'pointer',
@@ -194,7 +236,7 @@ const TestConnection = () => {
           style={{ 
             padding: '12px 20px', 
             backgroundColor: loading ? '#6c757d' : '#ffc107',
-            color: '#000000', // Texto negro para botón amarillo
+            color: '#000000',
             border: 'none',
             borderRadius: '5px',
             cursor: loading ? 'not-allowed' : 'pointer',
@@ -212,7 +254,7 @@ const TestConnection = () => {
           style={{ 
             padding: '12px 20px', 
             backgroundColor: loading ? '#6c757d' : '#6f42c1',
-            color: '#ffffff', // Texto blanco en botones
+            color: '#ffffff',
             border: 'none',
             borderRadius: '5px',
             cursor: loading ? 'not-allowed' : 'pointer',
@@ -230,7 +272,7 @@ const TestConnection = () => {
           style={{ 
             padding: '12px 20px', 
             backgroundColor: '#dc3545',
-            color: '#ffffff', // Texto blanco en botones
+            color: '#ffffff',
             border: 'none',
             borderRadius: '5px',
             cursor: loading ? 'not-allowed' : 'pointer',
@@ -252,7 +294,7 @@ const TestConnection = () => {
         marginBottom: '20px',
         fontSize: '16px',
         fontWeight: 'bold',
-        color: '#000000' // Texto negro forzado
+        color: '#000000'
       }}>
         <strong style={{ color: '#000000' }}>Estado:</strong> 
         <span style={{ color: '#000000', marginLeft: '10px' }}>{status}</span>
@@ -291,7 +333,7 @@ const TestConnection = () => {
             results.map((result, index) => (
               <div key={index} style={{ 
                 marginBottom: '5px',
-                color: '#000000', // Texto negro para logs
+                color: '#000000',
                 lineHeight: '1.4',
                 padding: '2px 0'
               }}>
@@ -375,21 +417,11 @@ const TestConnection = () => {
         borderRadius: '8px',
         padding: '20px'
       }}>
-        <p style={{ margin: '5px 0', color: '#000000' }}>
-          🎓 <strong style={{ color: '#000000' }}>Evidencia:</strong> 
-          <span style={{ color: '#007bff' }}> GA7-220501096-AA4-EV03</span>
+        <p style={{ margin: '0 0 10px 0', color: '#000000' }}>
+          <strong style={{ color: '#000000' }}>Proyecto:</strong> GA7-220501096-AA4-EV03 - React JS + Java
         </p>
-        <p style={{ margin: '5px 0', color: '#000000' }}>
-          ⚛️ <strong style={{ color: '#000000' }}>Tecnología:</strong> 
-          <span style={{ color: '#007bff' }}> React JS + Java Backend</span>
-        </p>
-        <p style={{ margin: '5px 0', color: '#000000' }}>
-          📅 <strong style={{ color: '#000000' }}>Desarrollo:</strong> 
-          <span style={{ color: '#007bff' }}> Módulo de Autenticación</span>
-        </p>
-        <p style={{ margin: '10px 0 5px 0', color: '#6c757d', fontSize: '12px' }}>
-          🚀 <strong style={{ color: '#000000' }}>Estado:</strong> 
-          <span style={{ color: '#28a745' }}> Sistema de pruebas funcionando correctamente</span>
+        <p style={{ margin: 0, color: '#666' }}>
+          Desarrollado para Mantenimiento S.A. - Frontend Module Evidence
         </p>
       </div>
     </div>
