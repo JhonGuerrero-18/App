@@ -46,6 +46,7 @@
 ### Prerrequisitos
 - Node.js 16+ instalado
 - NPM o Yarn
+Local:   http://localhost:5173/
 - Backend Java corriendo en puerto 8080
 - MySQL con base de datos `mantenimiento_sa`
 
